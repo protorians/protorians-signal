@@ -11,11 +11,19 @@ export class SignalEvent<I, B> implements ISignalEvent<I, B> {
 
     #status: boolean = false;
 
-    constructor(
+    #signalable: I
 
-        public signable: I
+    constructor( signalable: I ) { 
 
-    ) { }
+        this.#signalable = signalable
+        
+    }
+
+    get signalable(): I{
+
+        return this.#signalable
+        
+    }
 
     listen(options: ISignalListenOption<I, B>) {
 
@@ -33,11 +41,11 @@ export class SignalEvent<I, B> implements ISignalEvent<I, B> {
 
             if (this.#status) break;
 
-            option({
+            if(typeof option == "function") option({
 
                 signal: this,
 
-                signable: this.signable,
+                signalable: this.signalable,
 
                 details,
 
@@ -78,12 +86,23 @@ export default class SignalEvents<I, B> implements ISignalEvents<I, B>{
 
     #entries: ISignalEntries<I, B> = {} as ISignalEntries<I, B>
 
-    constructor(public signable: I) { }
+    #signalable: I
 
+    constructor( signalable: I ) { 
+
+        this.#signalable = signalable
+        
+    }
+
+    get signalable(): I{
+
+        return this.#signalable
+        
+    }
 
     listen(type: keyof B, callback: ISignalListenOption<I, B>) {
 
-        this.#entries[type] = this.#entries[type] || (new SignalEvent<I, B>(this.signable))
+        this.#entries[type] = this.#entries[type] || (new SignalEvent<I, B>(this.signalable))
 
         this.#entries[type].listen(callback)
 

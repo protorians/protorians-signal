@@ -2,7 +2,7 @@
 
 export interface ISignalEvents<I, B> {
 
-    signable: I
+    get signalable(): I
 
     get entries(): ISignalEntries<I, B>
 
@@ -22,7 +22,7 @@ export type ISignalDispatchOption<I, B> = {
 
     signal: ISignalEvent<I, B>;
 
-    signable: I;
+    signalable: I;
 
     details: B[keyof B];
 
@@ -30,6 +30,8 @@ export type ISignalDispatchOption<I, B> = {
 
 
 export interface ISignalEvent<I, B> {
+
+    get signalable(): I
 
     listen(options: ISignalListenOption<I, B>): this;
 
