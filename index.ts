@@ -143,3 +143,27 @@ export default class SignalEvents<I, B> implements ISignalEvents<I, B>{
     }
 
 }
+
+
+
+
+let DocumentSignalStore : SignalEvents<Document, any>|undefined = undefined;
+
+export function useDocumentSignal<B>(){
+    
+    DocumentSignalStore = DocumentSignalStore || new SignalEvents<Document, B>(document)
+
+    return DocumentSignalStore;
+    
+}
+
+
+let WindowSignalStore : SignalEvents<Window, any>|undefined = undefined;
+
+export function useGlobalSignal<B>(){
+    
+    WindowSignalStore = WindowSignalStore || new SignalEvents<Window, B>(window)
+
+    return WindowSignalStore;
+    
+}
