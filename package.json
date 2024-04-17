@@ -1,13 +1,13 @@
 {
   "name": "@protorians/signalable",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Signal's Events Manager",
   "main": "index.js",
   "types": "./global.d.ts",
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "typing": "npm-dts generate -o ./global.d.ts -c -L debug"
+    "typing": "npm-dts generate -o ./global.d.ts -c -f -L debug"
   },
   "keywords": ["protorians", "signal", "event"],
   "author": "Yannick GOBOU",
