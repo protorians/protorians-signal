@@ -123,7 +123,6 @@ declare module '@protorians/signalable/types/index' {
   export * from '@protorians/signalable/types/entries';
   export * from '@protorians/signalable/types/options';
   export * from '@protorians/signalable/types/signalable';
-  export * from '@protorians/signalable/types/window/index';
 
 }
 declare module '@protorians/signalable/types/options' {
