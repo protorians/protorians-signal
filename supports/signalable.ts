@@ -125,6 +125,15 @@ export class Signalables<I, B> implements ISignalables<I, B> {
   }
 
   /**
+   * Get Signalable all entries
+   */
+  get entries(): ISignalEntries<I, B> {
+
+    return this.#entries
+
+  }
+
+  /**
    * Get the object on which the signal management is grafted
    */
   get signalable(): I {
@@ -183,15 +192,6 @@ export class Signalables<I, B> implements ISignalables<I, B> {
   entry(type: keyof B): ISignalEntries<I, B>[keyof B] {
 
     return this.#entries[type] || undefined
-
-  }
-
-  /**
-   * Get Signalable all entries
-   */
-  get entries(): ISignalEntries<I, B> {
-
-    return this.#entries
 
   }
 
