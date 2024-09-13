@@ -1,6 +1,6 @@
 {
   "name": "@protorians/signalable",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Signal's Events Manager",
   "main": "index.js",
   "type": "module",
@@ -10,8 +10,7 @@
     "build": "pnpm run build:esm && pnpm run build:cjs",
     "build:esm": "tsc -p esm.tsconfig.json",
     "build:cjs": "tsc -p cjs.tsconfig.json",
-    "build:types": "npm-dts generate -o ./globals.d.ts -c",
-    "postinstall": "npm run build"
+    "build:types": "npm-dts generate -o ./globals.d.ts -c"
   },
   "exports": {
     "require": "./~cjs/index.js",
@@ -25,7 +24,7 @@
   ],
   "author": "Yannick GOBOU <protorians.dev@gmail.com>",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "typescript": "^5.6.2"
   }
 }
