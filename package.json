@@ -1,16 +1,16 @@
 {
   "name": "@protorians/signalable",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "description": "Signal's Events Manager",
   "main": "index.js",
   "type": "module",
-  "types": "./global.d.ts",
   "scripts": {
     "dev": "tsc --watch",
     "build": "pnpm run build:esm && pnpm run build:cjs",
     "build:esm": "tsc -p esm.tsconfig.json",
     "build:cjs": "tsc -p cjs.tsconfig.json",
-    "build:types": "npm-dts generate -o ./globals.d.ts -c"
+    "build:types": "npm-dts generate -o ./globals.d.ts -c",
+    "postinstall": "npx tsc -p esm.tsconfig.json && npx tsc -p cjs.tsconfig.json"
   },
   "exports": {
     "require": "./~cjs/index.js",
