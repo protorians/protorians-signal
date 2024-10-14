@@ -22,7 +22,7 @@
     "signal",
     "event"
   ],
-  "author": "Yannick GOBOU <protorians.dev@gmail.com>",
+  "author": "Yannick GOBOU",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.6.2"
