@@ -1,6 +1,6 @@
 {
   "name": "@protorians/signalable",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Signal's Events Manager",
   "main": "index.js",
   "type": "module",
