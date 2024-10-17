@@ -1,15 +1,15 @@
 # Protorians Signal
 
 Protorians Signal est un gestionnaire d'évènement en Javascript.
-Le but premier est d'avoir une liste de fonction typées avec le couple `nom : arguments`, le tout depuis un objet existant.
+Le but premier est d'avoir une liste de fonction typée avec le couple `nom : arguments`, le tout depuis un objet existant.
 ---
 
 ## Signal multiple
-C'est un signal qui gère plusieurs type de signaux.
+C'est un signal qui gère plusieurs types de signaux.
 Le but est d'avoir un regroupement de signaux dans le cadre d'une utilisation plus globale.
 
 ### Cas d'usage
-Il peut être mit en place dans le cadre d'un traitement à plusieurs niveaux.
+Il peut être mis en place dans le cadre d'un traitement à plusieurs niveaux.
 Imaginons que nous avons une classe qui possède les méthodes suivantes :
 
 ```typescript
@@ -35,7 +35,7 @@ class Genv implements IGenV{
 }
 ```
 
-Dans notre exemple, chaque methodes pourra appeler un type de signal.
+Dans notre exemple, chaque méthode pourra appeler un type de signal.
 
 ### Comment ça fonctionne
 
@@ -55,7 +55,7 @@ type IMySignal = {
 this.signal = new Signalables<IGenvable, IMySignal>(genvableInstance)
 ```
 
-- Definir les écouteurs
+- Définir les écouteurs
 
 ```typescript
 class Genv {
@@ -109,12 +109,12 @@ class Genv {
 
 ---
 ## Signal autonome
-C'est une unité de signal singulier qui se gère se gère de manière autonome.
-Le but est gérer un seul type de signal isolé dans le cadre d'une utilisation très précise.
+C'est une unité de signal singulier qui se gère de manière autonome.
+Le but est de gérer un seul type de signal isolé dans le cadre d'une utilisation très précise.
 
 ### Cas d'usage
-Il peut être mit en place dans le cadre d'un traitement à un seul niveau.
-Imaginons que nous avons une fonction faisant un seul traitement mais que avons besoin de déclencher un signal quand le traitement est éffectué :
+Il peut être mis en place dans le cadre d'un traitement à un seul niveau.
+Imaginons que nous avons une fonction faisant un seul traitement, mais qu'on a besoin de déclencher un signal quand le traitement est éffectué :
 
 ```typescript
 

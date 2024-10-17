@@ -8,9 +8,7 @@
     "dev": "tsc --watch",
     "build": "pnpm run build:esm && pnpm run build:cjs",
     "build:esm": "tsc -p esm.tsconfig.json",
-    "build:cjs": "tsc -p cjs.tsconfig.json",
-    "build:types": "npm-dts generate -o ./globals.d.ts -c",
-    "postinstall": "npx tsc -p esm.tsconfig.json && npx tsc -p cjs.tsconfig.json"
+    "build:cjs": "tsc -p cjs.tsconfig.json"
   },
   "exports": {
     "require": "./~cjs/index.js",
