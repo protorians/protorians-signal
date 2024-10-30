@@ -1,14 +1,14 @@
 {
   "name": "@protorians/signalable",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Signal's Events Manager",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "tsc --watch",
     "build": "pnpm run build:esm && pnpm run build:cjs",
-    "build:esm": "tsc -p esm.tsconfig.json",
-    "build:cjs": "tsc -p cjs.tsconfig.json"
+    "build:esm": "tsc -p esm.tsconfig.json && ts-add-js-extension --dir=~esm",
+    "build:cjs": "tsc -p cjs.tsconfig.json && ts-add-js-extension --dir=~cjs"
   },
   "exports": {
     "require": "./~cjs/index.js",
