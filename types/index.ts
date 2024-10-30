@@ -1,6 +1,4 @@
-
-
-export * from './callback'
-export * from './entries'
-export * from './options'
-export * from './signalable'
+export type * from './callback'
+export type * from './entries'
+export type * from './options'
+export type * from './signalable'

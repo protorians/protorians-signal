@@ -7,7 +7,7 @@
     "noImplicitAny": false,
     "allowJs": false,
     "removeComments": false,
-    "declarationMap": true,
+    "declarationMap": false,
     "inlineSources": true,
     "sourceMap": true,
     "preserveConstEnums": true,
